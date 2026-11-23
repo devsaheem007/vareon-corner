@@ -4,7 +4,8 @@ import multer from "multer";
 import env from "../config/env.js";
 import { AppError } from "../utils/helpers.js";
 
-export const notFound = (req, _res, next) => next(new AppError(404, `Route not found: ${req.method} ${req.originalUrl}`));
+export const notFound = (req, _res, next) =>
+  next(new AppError(404, `Route not found: ${req.method} ${req.originalUrl}`));
 
 // eslint-disable-next-line no-unused-vars
 export function errorHandler(err, req, res, _next) {
@@ -16,11 +17,17 @@ export function errorHandler(err, req, res, _next) {
   if (err instanceof ZodError) {
     status = 400;
     message = "Validation failed";
-    details = err.issues.map((i) => ({ field: i.path.join("."), message: i.message }));
+    details = err.issues.map((i) => ({
+      field: i.path.join("."),
+      message: i.message,
+    }));
   } else if (err instanceof mongoose.Error.ValidationError) {
     status = 400;
     message = "Validation failed";
-    details = Object.values(err.errors).map((e) => ({ field: e.path, message: e.message }));
+    details = Object.values(err.errors).map((e) => ({
+      field: e.path,
+      message: e.message,
+    }));
   } else if (err instanceof mongoose.Error.CastError) {
     status = 400;
     message = "Invalid identifier";
@@ -29,7 +36,10 @@ export function errorHandler(err, req, res, _next) {
     message = "That record already exists";
   } else if (err instanceof multer.MulterError) {
     status = err.code === "LIMIT_FILE_SIZE" ? 413 : 400;
-    message = err.code === "LIMIT_FILE_SIZE" ? "Image is too large (max 5 MB)" : "Upload failed";
+    message =
+      err.code === "LIMIT_FILE_SIZE"
+        ? "Image is too large (max 4 MB)"
+        : "Upload failed";
   } else if (err.type === "entity.parse.failed") {
     status = 400;
     message = "Malformed JSON body";
@@ -44,9 +54,15 @@ export function errorHandler(err, req, res, _next) {
   }
 
   if (status >= 500) {
-    if (!env.isTest || process.env.LOG_ERRORS) console.error(`[${req.method} ${req.originalUrl}]`, err);
+    if (!env.isTest || process.env.LOG_ERRORS)
+      console.error(`[${req.method} ${req.originalUrl}]`, err);
     message = "Something went wrong";
   }
 
-  res.status(status).json({ status: "error", message, ...(code && err.expose ? { code } : {}), ...(details ? { details } : {}) });
+  res.status(status).json({
+    status: "error",
+    message,
+    ...(code && err.expose ? { code } : {}),
+    ...(details ? { details } : {}),
+  });
 }

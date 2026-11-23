@@ -24,16 +24,39 @@ export async function sendMail({ to, subject, html, text }) {
     return;
   }
   if (!transport) {
-    // Development without SMTP: print the message so codes can be copied from the terminal.
-    console.log(`\n┌─ [mail:dev] to ${recipients}\n│  ${subject}\n│  ${String(text).split("\n").join("\n│  ")}\n└─`);
+    if (env.isProd) {
+      throw new Error("SMTP is not configured in production");
+    }
+
+    // Development only: print messages so codes can be copied from the terminal.
+    console.log(
+      `\n┌─ [mail:dev] to ${recipients}\n│  ${subject}\n│  ${String(text).split("\n").join("\n│  ")}\n└─`,
+    );
     return;
   }
-  await transport.sendMail({ from: env.MAIL_FROM || env.SMTP_USER, to: recipients, subject, html, text });
+  await transport.sendMail({
+    from: env.MAIL_FROM || env.SMTP_USER,
+    to: recipients,
+    subject,
+    html,
+    text,
+  });
 }
 
 /** Fire-and-forget for alerts: a mail problem must never break a booking or a sign-in. */
 export const sendMailSafe = (msg) =>
-  sendMail(msg).catch((err) => console.error(`[mail] failed to send "${msg.subject}":`, err.message));
+  sendMail(msg).catch((err) =>
+    console.error(`[mail] failed to send "${msg.subject}":`, err.message),
+  );
 
-export const verifySmtp = async () => (transport ? transport.verify().then(() => true, (e) => { console.error("[mail] SMTP check failed:", e.message); return false; }) : false);
+export const verifySmtp = async () =>
+  transport
+    ? transport.verify().then(
+        () => true,
+        (e) => {
+          console.error("[mail] SMTP check failed:", e.message);
+          return false;
+        },
+      )
+    : false;
 export const smtpConfigured = configured;

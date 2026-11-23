@@ -348,7 +348,7 @@ export const cars: Car[] = [
         name: "Signature",
         accent: "#c9c9c9",
         image:
-          "https://commons.wikimedia.org/wiki/Special:FilePath/Porsche%20Cayenne%20Turbo%20GT.jpg",
+          "/cars/Porsche Cayenne Turbo GT.jpg",
       },
     ],
   },
