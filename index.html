@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0D0D0D" />
+    <meta
+      name="description"
+      content="VAREON MOTORS — luxury performance vehicles and private showroom experience."
+    />
+    <title>VAREON MOTORS — Luxury Automotive Showroom</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/brand/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/brand/icon-192.png" />
+    <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
+
+    <!-- Social sharing (WhatsApp, Facebook, Instagram DMs, X, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="VAREON MOTORS" />
+    <meta property="og:title" content="VAREON MOTORS — Luxury Automotive Showroom" />
+    <meta property="og:description" content="Luxury performance vehicles and a private showroom experience. Book a test drive today." />
+    <meta property="og:image" content="/brand/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VAREON MOTORS — Luxury Automotive Showroom" />
+    <meta name="twitter:description" content="Luxury performance vehicles and a private showroom experience." />
+    <meta name="twitter:image" content="/brand/og-image.jpg" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"AutoDealer","name":"VAREON MOTORS","description":"Luxury performance vehicles and private showroom experience.","logo":"/brand/logo-round.png","image":"/brand/og-image.jpg"}
+    </script>
+
+    <link rel="preload" as="image" href="/brand/logo-384.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+      <style>
+      html,body{background:#0D0D0D;margin:0}
+      #boot{position:fixed;inset:0;z-index:199;display:flex;align-items:center;justify-content:center;background:#0D0D0D}
+      #boot .b{position:relative;width:176px;height:176px}
+      #boot .g{position:absolute;inset:-24px;border-radius:50%;background:radial-gradient(circle,rgba(230,57,70,.28),rgba(230,57,70,0) 68%)}
+      #boot svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg);animation:bs 1.5s linear infinite}
+      #boot img{position:absolute;inset:12px;width:152px;height:152px;border-radius:50%;object-fit:cover}
+      @keyframes bs{to{transform:rotate(180deg)}}
+      .no-boot #boot{display:none}
+    </style>
+    <script>
+      /* Decide before first paint: skip the boot screen on repeat visits in this tab and on /admin (which has its own loader). */
+      try{if(sessionStorage.getItem("vareon-splash-seen")==="1"||location.pathname.indexOf("/admin")===0)document.documentElement.className="no-boot"}catch(e){}
+    </script>
+  </head>
+  <body class="bg-ink text-white">
+    <div id="boot" aria-hidden="true">
+      <div class="b">
+        <div class="g"></div>
+        <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="none" stroke="rgba(255,255,255,.08)" stroke-width=".8"/><circle cx="50" cy="50" r="48" fill="none" stroke="#E63946" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="90 211.6"/></svg>
+        <img src="/brand/logo-384.webp" width="152" height="152" alt="" decoding="sync" fetchpriority="high" />
+      </div>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

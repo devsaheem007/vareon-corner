@@ -1,0 +1,34 @@
+# PG MOTORS vehicle image sources
+
+Vehicle images were switched to model-specific Wikimedia Commons photographs. Please review each file's license/attribution before commercial deployment.
+- **Toyota Land Cruiser 300** — Wikimedia Commons: `Toyota Land Cruiser 300.jpg`
+- **Toyota Crown Hybrid** — Wikimedia Commons: `2024 Toyota Crown Hybrid Z 2.5 6AA-AZSH32 (20241124) 02.jpg`
+- **Toyota GR Supra** — Wikimedia Commons: `Toyota GR Supra (2024) (53627303190).jpg`
+- **Honda Civic Type R** — Wikimedia Commons: `Honda civic type r.jpg`
+- **Honda Accord Touring** — Wikimedia Commons: `Honda Accord (CV3) EX eHEV, 2021, front.jpg`
+- **Honda CR-V Hybrid** — Wikimedia Commons: `Honda CR-V (6th generation).jpg`
+- **Haval H9** — Wikimedia Commons: `Haval H9 photo1.jpg`
+- **Haval H6 Hybrid** — Wikimedia Commons: `Haval H6 (54372781570).jpg`
+- **Lexus LX 600** — Wikimedia Commons: `Lexus LX 600 2023 001.jpg`
+- **Lexus LS 500h** — Wikimedia Commons: `Lexus LS 500, IAA 2017, Frankfurt (1Y7A3200).jpg`
+- **BMW M8 Competition** — Wikimedia Commons: `BMW M8 Competition.jpg`
+- **BMW i7 xDrive60** — Wikimedia Commons: `BMW i7.jpg`
+- **Mercedes-AMG GT 63** — Wikimedia Commons: `Mercedes-AMG GT 63.jpg`
+- **Mercedes-Maybach S 580** — Wikimedia Commons: `2021 Mercedes-Maybach S580 in Emerald Green and Mojave Silver, front left.jpg`
+- **Mercedes-Benz G 63 AMG** — Wikimedia Commons: `Mercedes-Benz G63.jpg`
+- **Audi RS e-tron GT** — Wikimedia Commons: `Audi RS e tron GT.jpg`
+- **Audi RS Q8** — Wikimedia Commons: `Audi RS Q8 (2021) (52198089316).jpg`
+- **Porsche 911 Turbo S** — Wikimedia Commons: `Porsche 911 Turbo S (GX04 GYK) - 25 April 2026.jpg`
+- **Porsche Cayenne Turbo GT** — Wikimedia Commons: `Porsche Cayenne Turbo GT.jpg`
+- **Range Rover Autobiography** — Wikimedia Commons: `Land Rover RANGE ROVER Autobiography P530 Standard-wheelbase (L460) front.jpg`
+- **Bentley Continental GT** — Wikimedia Commons: `2025 Bentley Continental GT.jpg`
+- **Rolls-Royce Ghost** — Wikimedia Commons: `2021 Rolls Royce Ghost V12 4x4 Auto.jpg`
+- **Maserati GranTurismo** — Wikimedia Commons: `Maserati Granturismo.jpg`
+- **Aston Martin DB12** — Wikimedia Commons: `2024 Aston Martin DB12.jpg`
+- **Ferrari Roma** — Wikimedia Commons: `Ferrari Roma.jpg`
+- **Lamborghini Huracan EVO** — Wikimedia Commons: `Lamborghini Huracan EVO.jpg`
+- **McLaren Artura** — Wikimedia Commons: `2024 McLaren Artura.jpg`
+- **Volvo EX90** — Wikimedia Commons: `Volvo EX90 Twin Motor Plus – f 14022026.jpg`
+- **Genesis G90** — Wikimedia Commons: `00 Genesis G90 0.jpg`
+- **Cadillac Escalade-V** — Wikimedia Commons: `25 Cadillac Escalade-V Base.jpg`
+- **Lincoln Navigator Black Label** — Wikimedia Commons: `Lincoln Navigator.jpg`
